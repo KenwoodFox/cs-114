@@ -1,11 +1,11 @@
-// Hello World
+// ~~name~~ ~~number~~
 
-namespace HelloWorld
+namespace ~~name~~
 {
-    class Hello {
+    class ~~name~~ {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
+            System.Console.WriteLine("~~name~~, ~~number~~");
         }
     }
 }

@@ -23,8 +23,11 @@ dest = f"{projNum}_{projName}/"
 # Copy all files
 shutil.copytree(src, dest)
 
+# Rename cs file
+os.rename(f"{dest}/hello.cs", f"{dest}/{projName}.cs")
+
 # All files
-newFiles = [y for x in os.walk(dest) for y in glob(os.path.join(x[0], "*.*"))]
+newFiles = [y for x in os.walk(dest) for y in glob(os.path.join(x[0], "*"))]
 
 for file in newFiles:
     print(f"Replacing text in {file}")

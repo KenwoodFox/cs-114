@@ -1,4 +1,4 @@
-// Hello World
+// String interpolation
 
 // Alias
 using con = System.Console;

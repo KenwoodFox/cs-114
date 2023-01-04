@@ -1,11 +1,11 @@
 
 all: build run
 
-build: hello.cs
-	mcs hello.cs
+build: stringInterpolation.cs
+	mcs stringInterpolation.cs
 
 clean:
 	git clean -fdX
 
-run: hello.exe
-	mono hello.exe
+run: stringInterpolation.exe
+	mono stringInterpolation.exe

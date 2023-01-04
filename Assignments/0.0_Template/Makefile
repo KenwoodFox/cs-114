@@ -1,11 +1,11 @@
 
 all: build run
 
-build: hello.cs
-	mcs hello.cs
+build: ~~name~~.cs
+	mcs ~~name~~.cs
 
 clean:
 	git clean -fdX
 
-run: hello.exe
-	mono hello.exe
+run: ~~name~~.exe
+	mono ~~name~~.exe
