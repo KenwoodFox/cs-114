@@ -1,8 +1,8 @@
-// Hello World
+// HelloWorld
 
 namespace HelloWorld
 {
-    class Hello {
+    class HelloWorld {
         static void Main(string[] args)
         {
             System.Console.WriteLine("Hello World!");
