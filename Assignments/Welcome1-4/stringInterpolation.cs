@@ -8,12 +8,16 @@ namespace HelloWorld
     class Hello {
         static void Main(string[] args)
         {
-            string myString;
+            string userString;
+            const string person = "Jamila";
 
-            con.WriteLine("Welcome to the program. Please enter a string: ");
-            myString = con.ReadLine(); // Read a string from console
+            con.WriteLine("Welcome to the program.\n\n");
 
-            con.WriteLine($"Your string was \"{myString}\""); // Print that string back out
+            con.WriteLine($"Hello I am {person}");
+            con.WriteLine("Please enter your name: ");
+            userString = con.ReadLine(); // Read a string from console
+
+            con.WriteLine($"Hello {person} {userString}"); // Print that string back out
         }
     }
 }
