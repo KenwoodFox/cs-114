@@ -1,11 +1,14 @@
 // ~~name~~ ~~number~~
 
+// Alias
+using con = System.Console;
+
 namespace ~~name~~
 {
     class ~~name~~ {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("~~name~~, ~~number~~");
+            con.WriteLine("~~name~~, ~~number~~");
         }
     }
 }

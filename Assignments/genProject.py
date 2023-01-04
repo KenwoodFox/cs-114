@@ -14,11 +14,14 @@ src = "0.0_Template"
 
 print("Wizzard for making a new challenge project from template\n --Joe\n\n")
 
-projName = input("Enter project Name   (Ex. HelloWorld ): ")
-projNum = input("Enter project Number (Ex. 2.19)       : ")
+projName = str(input("Enter project Name   (Ex. HelloWorld ): "))
+projNum = str(input("Enter project Number (Ex. 2.19)       : "))
 
 # Destination path
-dest = f"{projNum}_{projName}/"
+if len(projNum) != 0:
+    dest = f"{projNum}_{projName}/"
+else:
+    dest = f"{projName}/"
 
 # Copy all files
 shutil.copytree(src, dest)

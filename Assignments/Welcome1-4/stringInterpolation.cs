@@ -13,11 +13,10 @@ namespace HelloWorld
 
             con.WriteLine("Welcome to the program.\n\n");
 
-            con.WriteLine($"Hello I am {person}");
-            con.WriteLine("Please enter your name: ");
+            con.WriteLine($"Hello I am {person}.\nPlease enter your name: ");
             userString = con.ReadLine(); // Read a string from console
 
-            con.WriteLine($"Hello {person} {userString}"); // Print that string back out
+            con.WriteLine($"Hello {person}, {userString}."); // Print that string back out
         }
     }
 }
