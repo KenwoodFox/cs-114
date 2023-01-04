@@ -1,6 +1,5 @@
 // Adding
 using System;
-using System.Collections.Generic;
 
 // Alias
 using con = System.Console;
@@ -24,7 +23,7 @@ namespace Adding
                 con
                     .WriteLine($"Please enter a number: ({i + 1}/{
                         NUMBERS_TO_ADD})");
-                intArray[i] = Convert.ToInt32(con.ReadLine());
+                intArray[i] = int.Parse(con.ReadLine());
             }
 
             // Find sum
