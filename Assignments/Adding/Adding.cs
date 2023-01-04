@@ -1,5 +1,6 @@
 // Adding
 using System;
+using System.Linq;
 
 // Alias
 using con = System.Console;
@@ -33,7 +34,9 @@ namespace Adding
                 sum += intArray[i];
             }
 
-            con.WriteLine($"The sum of your input numbers is {sum}.");
+            con
+                .WriteLine($"The sum of your input numbers is {
+                    sum}, the max is {intArray.Max()}.");
         }
     }
 }
