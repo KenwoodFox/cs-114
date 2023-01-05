@@ -18,25 +18,8 @@ namespace ComparingNums
             con.WriteLine("Please enter another number: ");
             userInput.num2 = int.Parse(con.ReadLine());
 
-            // Iff tree
-            if (userInput.num1 > userInput.num2)
-            {
-                con
-                    .WriteLine($"Your first number was bigger. ({
-                        userInput.num1}>{userInput.num2})");
-            }
-            else if (userInput.num1 < userInput.num2)
-            {
-                con
-                    .WriteLine($"Your second number was bigger. ({
-                        userInput.num1}<{userInput.num2})");
-            }
-            else
-            {
-                con
-                    .WriteLine($"Both numbers are evaluated the same. ({
-                        userInput.num1}=={userInput.num2})");
-            }
+            // If tree
+            con.WriteLine($"Your {userInput.num1 > userInput.num2 ? "first" : "second"} number was bigger. ({userInput.num1}{userInput.num1 > userInput.num2 ? " is greater than " : " is less than "}{userInput.num2})");
         }
     }
 
