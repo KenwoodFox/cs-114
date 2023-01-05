@@ -19,7 +19,11 @@ namespace ComparingNums
             userInput.num2 = int.Parse(con.ReadLine());
 
             // If tree
-            con.WriteLine($"Your {userInput.num1 > userInput.num2 ? "first" : "second"} number was bigger. ({userInput.num1}{userInput.num1 > userInput.num2 ? " is greater than " : " is less than "}{userInput.num2})");
+            if (userInput.num1 == userInput.num2){
+                con.WriteLine("Both inputs are identical");
+            } else {
+                con.WriteLine($"Your {userInput.num1 > userInput.num2 ? "first" : "second"} number was bigger. ({userInput.num1}{userInput.num1 > userInput.num2 ? " is greater than " : " is less than "}{userInput.num2})");
+            }
         }
     }
 
