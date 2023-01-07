@@ -1,0 +1,6 @@
+Addition program.
+Please enter a number: (1/2)
+2
+Please enter a number: (2/2)
+3
+The sum of your input numbers is 5, the max is 3.

@@ -1,3 +1,4 @@
 # Binary files
 *.exe
 _staging
+_build
