@@ -1,0 +1,7 @@
+Welcome to the program.
+
+
+Hello I am Jamila.
+Please enter your name: 
+Joe
+Hello Jamila, Joe.

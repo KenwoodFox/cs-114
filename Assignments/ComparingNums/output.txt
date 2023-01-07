@@ -1,0 +1,6 @@
+Welcome to comparing nums!
+Please enter a number: 
+12
+Please enter another number: 
+33
+Your second number was bigger. (12 is less than 33)

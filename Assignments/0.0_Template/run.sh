@@ -10,7 +10,7 @@ mkdir -p _build
 
 if [[ $* == *--pack* ]]
 then
-    mcs Adding.cs
+    mcs ~~name~~.cs
     cd _build
     # python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
 
@@ -31,8 +31,8 @@ then
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
 
     # Give it a nice name
-    cp *.pdf Adding.pdf
+    mv *.pdf ~~name~~.pdf
 else
-    mcs Adding.cs
-    mono Adding.exe
+    mcs ~~name~~.cs
+    mono ~~name~~.exe
 fi
