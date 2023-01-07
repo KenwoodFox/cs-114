@@ -23,10 +23,10 @@ then
     # # Stage and zip
     mkdir -p bin/
     mkdir -p source/
-    cp ../*.exe bin/
+    mv ../*.exe bin/
 
-    # cp -r ../* source/
-    # rm -r source/_build # messy but extglobs are hard
+    cp -r ../* source/
+    rm -r source/_build # messy but extglobs are hard
 
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
 else
