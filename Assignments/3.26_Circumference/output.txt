@@ -1,0 +1,4 @@
+Please enter radius (feet)
+6
+Area of circle is: 113.10 sq. ft
+circumference is: 37.70 ft
