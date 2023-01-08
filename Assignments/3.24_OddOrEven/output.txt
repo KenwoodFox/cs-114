@@ -1,0 +1,7 @@
+Enter an integer:
+6
+6 is an even number
+
+Enter an integer:
+11
+11 is odd number

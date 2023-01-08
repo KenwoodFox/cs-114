@@ -11,7 +11,7 @@ if [[ $* == *--pack* ]]
 then
     git clean -fdX
     mkdir -p _build
-    mcs ~~name~~.cs
+    mcs OddOrEven.cs
     cd _build
     # python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
 
@@ -32,8 +32,8 @@ then
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
 
     # Give it a nice name
-    mv *.pdf ~~name~~.pdf
+    mv *.pdf OddOrEven.pdf
 else
-    mcs ~~name~~.cs
-    mono ~~name~~.exe
+    mcs OddOrEven.cs
+    mono OddOrEven.exe
 fi
