@@ -1,0 +1,14 @@
+Enter as many characters as you like, use Ctrl+C to exit.
+This program will print their integer representation for you.
+ABCabc012$
+The character A has the value 65
+The character B has the value 66
+The character C has the value 67
+The character a has the value 97
+The character b has the value 98
+The character c has the value 99
+The character 0 has the value 48
+The character 1 has the value 49
+The character 2 has the value 50
+The character $ has the value 36
+Would you like to find the int value of a character? (y/n)
