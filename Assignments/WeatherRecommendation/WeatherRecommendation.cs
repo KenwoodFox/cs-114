@@ -20,7 +20,7 @@ __        __         _   _
             bool isRainy = false;
             bool isWindy = false;
 
-            con.Write("Please enter your name: ");
+            con.Write("\nPlease enter your name: ");
             uName = con.ReadLine();
 
             con.Write("Is it raining today (y/n)? ");
@@ -32,6 +32,11 @@ __        __         _   _
             // Tell the user what the weather is like
             con.Write($"Hello {uName}\n"
             + $"Its {isRainy && isWindy? "windy and rainy" : isRainy ? "raining" : isWindy? "windy" : "neither rainy, nor windy"} today.\n");
+
+            // Edge case
+            if (isRainy && !(isWindy)){
+                con.WriteLine("You should pack an umbrella.");
+            }
         }
     }
 }
