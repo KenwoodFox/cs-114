@@ -1,0 +1,50 @@
+Welcome to
+__        __         _   _               
+\ \      / /__  __ _| |_| |__   ___ _ __ 
+ \ \ /\ / / _ \/ _` | __| '_ \ / _ \ '__|
+  \ V  V /  __/ (_| | |_| | | |  __/ |   
+   \_/\_/ \___|\__,_|\__|_| |_|\___|_|
+Please enter your name: Joe
+Is it raining today (y/n)? n
+Is it windy today (y/n)? n
+Hello Joe
+Its neither rainy, nor windy today.
+
+
+Welcome to
+__        __         _   _               
+\ \      / /__  __ _| |_| |__   ___ _ __ 
+ \ \ /\ / / _ \/ _` | __| '_ \ / _ \ '__|
+  \ V  V /  __/ (_| | |_| | | |  __/ |   
+   \_/\_/ \___|\__,_|\__|_| |_|\___|_|
+Please enter your name: Joe
+Is it raining today (y/n)? n
+Is it windy today (y/n)? y
+Hello Joe
+Its windy today.
+
+
+Welcome to
+__        __         _   _               
+\ \      / /__  __ _| |_| |__   ___ _ __ 
+ \ \ /\ / / _ \/ _` | __| '_ \ / _ \ '__|
+  \ V  V /  __/ (_| | |_| | | |  __/ |   
+   \_/\_/ \___|\__,_|\__|_| |_|\___|_|
+Please enter your name: Joe
+Is it raining today (y/n)? y
+Is it windy today (y/n)? n
+Hello Joe
+Its raining today.
+
+
+Welcome to
+__        __         _   _               
+\ \      / /__  __ _| |_| |__   ___ _ __ 
+ \ \ /\ / / _ \/ _` | __| '_ \ / _ \ '__|
+  \ V  V /  __/ (_| | |_| | | |  __/ |   
+   \_/\_/ \___|\__,_|\__|_| |_|\___|_|
+Please enter your name: Joe
+Is it raining today (y/n)? y
+Is it windy today (y/n)? y
+Hello Joe
+Its windy and rainy today.
