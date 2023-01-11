@@ -1,5 +1,7 @@
 // MathMax
 // Alias
+using System.Collections.Generic;
+
 using con = System.Console;
 
 namespace MathMax
@@ -8,30 +10,38 @@ namespace MathMax
     {
         static void Main(string[] args)
         {
-            const int NUMBERS_TO_MAX = 3;
-
-            double[] dubArray = new double[NUMBERS_TO_MAX];
-
-            con.WriteLine("Welcome to MathMax.");
-
-            // Collect user input
-            for (int i = 0; i < NUMBERS_TO_MAX; i++)
-            {
-                con
-                    .WriteLine($"Please enter a number: ({i + 1}/{
-                        NUMBERS_TO_MAX})");
-                dubArray[i] = double.Parse(con.ReadLine());
-            }
+            List<double> dubList = new List<double>();
 
             con
-                .WriteLine($"The maximum of your input was {
-                    Maximum(dubArray)}.");
+                .WriteLine(@"Welcome to
+ __  __       _   _       __  __            
+|  \/  | __ _| |_| |__   |  \/  | __ ___  __
+| |\/| |/ _` | __| '_ \  | |\/| |/ _` \ \/ /
+| |  | | (_| | |_| | | | | |  | | (_| |>  < 
+|_|  |_|\__,_|\__|_| |_| |_|  |_|\__,_/_/\_\");
+
+            // Collect user input
+            try
+            {
+                while (true)
+                {
+                    con
+                        .Write($"\nPlease enter a number (enter a non-number when done)\n: ");
+                    dubList.Add(double.Parse(con.ReadLine()));
+                }
+            }
+            catch (System.FormatException)
+            {
+                /* We end up here when exception is caught */
+            }
+
+            con.WriteLine($"The maximum of your input was {Maximum(dubList)}.");
         }
 
-        static double Maximum(double[] inD)
+        static double Maximum(List<double> inD)
         {
             double max = 0.0;
-            for (int i = 0; i < inD.Length; i++)
+            for (int i = 0; i < inD.Count; i++)
             {
                 if (inD[i] > max)
                 {
