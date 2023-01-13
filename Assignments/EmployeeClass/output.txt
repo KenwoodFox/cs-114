@@ -1,0 +1,28 @@
+
+ _____                 _                       
+| ____|_ __ ___  _ __ | | ___  _   _  ___  ___ 
+|  _| | '_ ` _ \| '_ \| |/ _ \| | | |/ _ \/ _ \
+| |___| | | | | | |_) | | (_) | |_| |  __/  __/
+|_____|_| |_| |_| .__/|_|\___/ \__, |\___|\___|
+                |_|            |___/
+                
+Welcome to the workforce.
+
+You are making a new employee, enter a first and last name, and a monthly salary.
+When you're finished. Press ENTER.
+First name                    : John
+Last name                     : Smith
+Monthly Salary (enter to stop): 2900
+Added John Smith.
+
+First name                    : Mary
+Last name                     : Sue
+Monthly Salary (enter to stop): 3200
+Added Mary Sue.
+
+First name                    : 
+Last name                     : 
+Monthly Salary (enter to stop): 
+
+Employee 1, John Smith. Yearly salary is $34,800.00
+Employee 2, Mary Sue. Yearly salary is $38,400.00
