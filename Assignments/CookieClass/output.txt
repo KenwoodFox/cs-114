@@ -1,0 +1,28 @@
+
+  ____            _    _         ____ _               
+ / ___|___   ___ | | _(_) ___   / ___| | __ _ ___ ___ 
+| |   / _ \ / _ \| |/ / |/ _ \ | |   | |/ _` / __/ __|
+| |__| (_) | (_) |   <| |  __/ | |___| | (_| \__ \__ \
+ \____\___/ \___/|_|\_\_|\___|  \____|_|\__,_|___/___/
+
+Free cookies for all!
+
+
+Welcome to CookieClass, please have a look at our menu and make a selection.
+Enter any non-order number to continue.
+Item 0  Oreo Cookie             $1.29
+Item 1  Sugar Cookie            $1.49
+Item 2  Chocolate Chip Cookie   $1.79
+Please enter a selection (or -1 to stop): 0
+Please enter a qty for this item: 2
+Please enter a selection (or -1 to stop): 1
+Please enter a qty for this item: 5
+Please enter a selection (or -1 to stop): 2
+Please enter a qty for this item: 1
+Please enter a selection (or -1 to stop): -1
+2       Oreo Cookie             $2.58
+5       Sugar Cookie            $7.45
+1       Chocolate Chip Cookie   $1.79
+Your total is: $11.82
+
+Thank you for coming to our shop!
