@@ -1,3 +1,0 @@
-Due to weirdness with C#, you must manually echo into this file.
-
-Use `cmd >> output.txt`

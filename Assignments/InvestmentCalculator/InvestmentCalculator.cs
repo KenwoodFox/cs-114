@@ -12,7 +12,7 @@ class InvestmentCalculator : Window
 
     static NumericInput yearlyInvestment;
 
-    static NumericInput nYears;
+    static NumericInput numberYears;
 
     static NumericInput futureValue;
 
@@ -30,12 +30,12 @@ class InvestmentCalculator : Window
         fix.Put(exitBtn, 100, 180);
 
         // All the input boxes
-        monthlyInvestment = new NumericInput("Monthly Investment");
+        monthlyInvestment = new NumericInput("Monthly Investment", "100");
         fix.Put(monthlyInvestment.localFix, 20, 20);
-        yearlyInvestment = new NumericInput("Yearly Investment");
+        yearlyInvestment = new NumericInput("Yearly Investment", "7.5");
         fix.Put(yearlyInvestment.localFix, 20, 60);
-        nYears = new NumericInput("Number of years");
-        fix.Put(nYears.localFix, 20, 100);
+        numberYears = new NumericInput("Number of years", "10");
+        fix.Put(numberYears.localFix, 20, 100);
         futureValue = new NumericInput("Future Value");
         fix.Put(futureValue.localFix, 20, 140);
 
@@ -43,7 +43,7 @@ class InvestmentCalculator : Window
         calcBtn.Clicked += new EventHandler(pCalculate);
         exitBtn.Clicked += new EventHandler(pExit);
 
-        Window window = new Window("helloworld");
+        Window window = new Window("Future Value");
 
         // Check when window is closed.
         window.DeleteEvent += pExit;
@@ -60,7 +60,15 @@ class InvestmentCalculator : Window
     {
         double mInvest = monthlyInvestment.getEntry();
         double yRate = yearlyInvestment.getEntry();
-        // double nYears = nYears.getEntry();
+        double nYears = numberYears.getEntry();
+
+        double result = mInvest;
+        for (int i = 0; i < nYears * 12; i++)
+        {
+            result += mInvest + (i % 12 == 0 ? result * (yRate / 100) : 0);
+        }
+
+        futureValue.setEntry($"{result:C}");
     }
 
     static void pExit(object obj, EventArgs args)
@@ -81,16 +89,16 @@ class NumericInput
 {
     public Fixed localFix { get; }
 
-    Label localLabel;
+    private Label localLabel;
 
-    Entry localEntry;
+    private Entry localEntry;
 
     // Creates a numeric input
-    public NumericInput(string _inputLabel)
+    public NumericInput(string _inputLabel, string _default = "0")
     {
         localFix = new Fixed();
         localLabel = new Label(_inputLabel);
-        localEntry = new Gtk.Entry(); // Would require subclassing to enforce numbers only
+        localEntry = new Entry(_default); // Would require subclassing to enforce numbers only
 
         // Place widgets
         localFix.Put(localLabel, 0, 0);
@@ -100,5 +108,10 @@ class NumericInput
     public double getEntry()
     {
         return double.Parse(localEntry.Text);
+    }
+
+    public void setEntry(string str)
+    {
+        localEntry.Text = str;
     }
 }

@@ -11,13 +11,14 @@ if [[ $* == *--pack* ]]
 then
     git clean -fdX
     mkdir -p _build
-    mcs InvestmentCalculator.cs
+    mcs InvestmentCalculator.cs -pkg:gtk-sharp-2.0
     cd _build
     # python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
 
     # Build the docs
     cp ../*.cs .
     cp ../*.tex .
+    cp ../*.png .
 	# cp ../*.sty .
 	find . -name '*.tex' -exec latexmk --shell-escape -pdf {} \;
 
