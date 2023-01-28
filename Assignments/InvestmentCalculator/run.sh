@@ -11,7 +11,7 @@ if [[ $* == *--pack* ]]
 then
     git clean -fdX
     mkdir -p _build
-    mcs TestGTK.cs
+    mcs InvestmentCalculator.cs
     cd _build
     # python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
 
@@ -32,8 +32,8 @@ then
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
 
     # Give it a nice name
-    mv *.pdf TestGTK.pdf
+    mv *.pdf InvestmentCalculator.pdf
 else
-    mcs TestGTK.cs -pkg:gtk-sharp-2.0
-    mono TestGTK.exe
+    mcs InvestmentCalculator.cs -pkg:gtk-sharp-2.0
+    mono InvestmentCalculator.exe
 fi

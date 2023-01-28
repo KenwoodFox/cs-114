@@ -5,7 +5,7 @@ using Gtk;
 // Alias
 using con = System.Console;
 
-class TestGTK : Window
+class InvestmentCalculator : Window
 {
     // Memory
     static NumericInput monthlyInvestment;
@@ -16,7 +16,7 @@ class TestGTK : Window
 
     static NumericInput futureValue;
 
-    public TestGTK() :
+    public InvestmentCalculator() :
         base("Color Dialog")
     {
         // Start this application
@@ -60,7 +60,7 @@ class TestGTK : Window
     {
         double mInvest = monthlyInvestment.getEntry();
         double yRate = yearlyInvestment.getEntry();
-        double nYears = nYears.getEntry();
+        // double nYears = nYears.getEntry();
     }
 
     static void pExit(object obj, EventArgs args)
@@ -72,7 +72,7 @@ class TestGTK : Window
     public static void Main()
     {
         Application.Init();
-        new TestGTK();
+        new InvestmentCalculator();
         Application.Run();
     }
 }
