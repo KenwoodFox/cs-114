@@ -107,7 +107,25 @@ class NumericInput
 
     public double getEntry()
     {
-        return double.Parse(localEntry.Text);
+        double r = 0;
+        try
+        {
+            r = double.Parse(localEntry.Text);
+        }
+        catch (Exception ex)
+        {
+            // On format exception...
+            MessageDialog md =
+                new MessageDialog(null,
+                    DialogFlags.DestroyWithParent,
+                    MessageType.Warning,
+                    ButtonsType.Ok,
+                    $"Error: {ex.GetType().ToString()}");
+            md.Run(); // Run till button push
+            md.Destroy();
+        }
+
+        return r;
     }
 
     public void setEntry(string str)
