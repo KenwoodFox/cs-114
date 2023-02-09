@@ -1,4 +1,7 @@
 # Binary files
 *.exe
+
+# Dev
+obj
 _staging
 _build
