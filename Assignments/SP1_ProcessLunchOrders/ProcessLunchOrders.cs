@@ -1,6 +1,4 @@
 // ProcessLunchOrders SP1
-using Newtonsoft.Json;
-
 // Alias
 using con = System.Console;
 
@@ -11,10 +9,8 @@ namespace ProcessLunchOrders
     {
         con.WriteLine("ProcessLunchOrders, SP1");
 
-        string fileName = "menu.json";
-        string jsonString = File.ReadAllText(fileName);
-        MenuItems menuItems =
-            JsonSerializer.Deserialize<Menuitems>(jsonString);
+        // These components included from docx
+        Hamburger = 
 
         con.WriteLine(menuItems.items);
     }
