@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+#!/bin/python
 import sys
 
 
@@ -10,12 +10,17 @@ from PyQt6.QtWidgets import (
     QRadioButton,
     QTextEdit,
     QCheckBox,
+    QGroupBox,
 )
 
 
 class ProcessLunchOrders(QWidget):
     def __init__(self):
         super().__init__()
+
+        # Some constants
+        self.mainPrices = [6.95, 5.95, 4.95]  # All prices
+        self.addOnPrices = [0.75, 0.50, 0.25]
 
         # load ui file
         uic.loadUi("lunchOrders.ui", self)
@@ -42,24 +47,35 @@ class ProcessLunchOrders(QWidget):
 
         self.subtotalBox = self.findChild(QTextEdit, "subtotalBox")
 
+        # This is needed because the label above the addons must be updated when a main course is selected
+        for btn in self.mainSelection:
+            btn.clicked.connect(
+                self.updateLabels
+            )  # This connects every element to this label
+        self.addOnLabel = self.findChild(QGroupBox, "AddOnItemsBox")
+        self.addOnLabelStr = (
+            "Add-on items ($%s/each)"  # use this string every time when formatting
+        )
+        self.addOnLabel.setTitle(self.addOnLabelStr % 0.75)  # Update the string
+
     def placeOrder(self):
         # Quickly find what radio button is pushed
-        prices = [6.95, 5.95, 4.95]  # All prices
-        # Price is the sum of everything selected
-        price = sum(
-            [p for i, p in enumerate(prices) if self.getSelected(self.mainSelection)[i]]
-        )
 
-        addOnPrices = [0.75, 0.50, 0.25]  # All add on prices
-        addOnPrice = sum(
-            [
-                p
-                for i, p in enumerate(addOnPrices)
-                if self.getSelected(self.addOnSeletion)[i]
-            ]
-        )
+        # Price is the sum of everything selected
+        price = self.getSum(self.mainPrices, self.mainSelection)
+        addOnPrice = self.getSum(self.addOnPrices, self.addOnSeletion)
 
         self.subtotalBox.setText(f"${price + addOnPrice:.2f}")
+
+    def updateLabels(self):
+        """Updates any labels needed"""
+        self.addOnLabel.setTitle(
+            self.addOnLabelStr % self.getSum(self.addOnPrices, self.mainSelection)
+        )
+
+    def getSum(self, vals, sel):
+        """Zipper merges two lists and finds the sum between"""
+        return sum([p for i, p in enumerate(vals) if self.getSelected(sel)[i]])
 
     def getSelected(self, ops):
         """Returns the selected elements in list."""
