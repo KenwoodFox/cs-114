@@ -3,7 +3,7 @@ import sys
 
 
 from PyQt6 import uic
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton
 
 
 class ProcessLunchOrders(QWidget):
@@ -13,9 +13,8 @@ class ProcessLunchOrders(QWidget):
         # load ui file
         uic.loadUi("lunchOrders.ui", self)
 
-        # self.window.show()
-
-        # sys.exit(app.exec())
+        # Connect controls
+        exitButton = self.ui.findChild(QPushButton, "ExitButton")
 
 
 if __name__ == "__main__":
