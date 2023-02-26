@@ -1,5 +1,7 @@
 // TestJson
+using System.Collections.Generic;
 using System.Net;
+using Newtonsoft.Json;
 
 // Alias
 using con = System.Console;
@@ -23,6 +25,12 @@ namespace TestJson
             }
 
             con.WriteLine($"Response was {json}");
+
+            Dictionary<string, string> p =
+                JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
+            // List<string>? p = JsonConvert.DeserializeObject<List<string>>(json);
+            con.WriteLine(p["version"]);
         }
     }
 }
