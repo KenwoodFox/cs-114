@@ -5,3 +5,8 @@
 obj
 _staging
 _build
+
+# C#
+.vs/
+bin/
+obj/
