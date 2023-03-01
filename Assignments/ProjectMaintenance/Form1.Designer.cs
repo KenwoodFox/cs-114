@@ -34,11 +34,13 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(150, 48);
+            textBox1.Location = new Point(164, 22);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 0;
@@ -46,7 +48,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(150, 101);
+            textBox2.Location = new Point(164, 75);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 1;
@@ -54,7 +56,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(150, 160);
+            textBox3.Location = new Point(164, 134);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 2;
@@ -63,7 +65,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(39, 56);
+            label1.Location = new Point(53, 30);
             label1.Name = "label1";
             label1.Size = new Size(35, 15);
             label1.TabIndex = 3;
@@ -72,7 +74,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(39, 109);
+            label2.Location = new Point(53, 83);
             label2.Name = "label2";
             label2.Size = new Size(67, 15);
             label2.TabIndex = 4;
@@ -81,17 +83,37 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(39, 168);
+            label3.Location = new Point(53, 142);
             label3.Name = "label3";
             label3.Size = new Size(33, 15);
             label3.TabIndex = 5;
             label3.Text = "Price";
             // 
+            // button1
+            // 
+            button1.Location = new Point(34, 325);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 6;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(177, 325);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 7;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(329, 397);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -113,5 +135,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button button1;
+        private Button button2;
     }
 }
