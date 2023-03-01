@@ -29,4 +29,9 @@ public class Product
         get { return price; }
         set { price = value; }
     }
+
+	public string GetDisplayText(string sep)
+	{
+		return Code + sep + Price.ToString("c") +sep + Description;
+	}
 }
