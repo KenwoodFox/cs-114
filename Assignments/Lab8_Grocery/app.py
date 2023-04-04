@@ -37,7 +37,7 @@ class Grocery(QWidget):
 
     def remove(self):
         for item in self.listBox.selectedItems():
-            self.listBox.removeItemWidget(item)
+            self.listBox.takeItem(self.listBox.row(item))
 
     def clear(self):
         self.listBox.clear()

@@ -5,6 +5,8 @@
 obj
 _staging
 _build
+*.pdf
+*.zip
 
 # C#
 .vs/

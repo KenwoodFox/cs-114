@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ProcessLunchOrders</class>
- <widget class="QWidget" name="ProcessLunchOrders">
+ <class>Grocery</class>
+ <widget class="QWidget" name="Grocery">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ProcessLunchOrders</string>
+   <string>Grocery</string>
   </property>
   <widget class="QPushButton" name="addButton">
    <property name="geometry">
@@ -83,6 +83,19 @@
      <width>201</width>
      <height>271</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>10</y>
+     <width>101</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Grocery Items</string>
    </property>
   </widget>
  </widget>
