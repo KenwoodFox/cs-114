@@ -7,6 +7,7 @@ _staging
 _build
 *.pdf
 *.zip
+.vscode
 
 # C#
 .vs/
